@@ -1,0 +1,211 @@
+/* ================== RESET Y TIPOGRAFÍA ================== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== HEADER ================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  border-bottom: 3px solid #f97316;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #f97316;
+}
+
+.nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #cf0e0e;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #f97316;
+  border-bottom: 2px solid #f97316;
+}
+
+.nav a.register-btn {
+  margin-left: 2rem;
+  padding: 0.5rem 1.2rem;
+  background: #f97316;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav a.register-btn:hover {
+  background: #d65c0b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.logout-btn {
+  margin-left: 20px;
+  padding: 6px 12px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #ea580c;
+}
+
+/* ================== MAIN / APP ================== */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* =================== MEDIA QUERIES =================== */
+
+/* Móviles (pantallas hasta 768px) */
+@media (max-width: 768px) {
+
+  /* Header responsive */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav a,
+  .nav a.register-btn {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+  }
+
+  .logout-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  /* Ajustes contenedores generales */
+  .principal-container,
+  .about,
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* Barras de búsqueda / formularios */
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .search-bar select,
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+  }
+
+  /* Grids de eventos */
+  .event-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Cartas de eventos */
+  .event-card {
+    height: 180px;
+    font-size: 0.9rem;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* Chat flotante */
+  .chat-float {
+    width: 90%;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+
+  .chat-float.closed {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Secciones de texto */
+  .destacados h2,
+  .mas-eventos h2,
+  .about-hero h1,
+  .about-purpose h2,
+  .faq-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-hero p,
+  .about-purpose p,
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .search-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-card {
+    height: 200px;
+    font-size: 1rem;
+  }
+
+  .chat-float {
+    width: 250px;
+  }
+}

@@ -1,0 +1,209 @@
+.contact {
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: #fff9f4;
+  color: #333;
+}
+
+/* HEADER */
+.contact h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #ff7b00;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(255, 123, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #ff7b00;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #f0b27a;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff7b00;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 123, 0, 0.3);
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, #ff7b00, #ff9e32, #ffb84d);
+  color: white;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.2);
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 123, 0, 0.3);
+}
+
+/* CONTACT INFO */
+.contact-info {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(255, 123, 0, 0.2);
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #e65100;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #5a4635;
+  line-height: 1.5;
+}
+/* =================== MEDIA QUERIES GENERALES =================== */
+
+/* Móviles (pantallas hasta 768px) */
+@media (max-width: 768px) {
+
+  /* Ajustar contenedores generales */
+  .principal-container,
+  .about,
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* Barras de búsqueda / formularios */
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .search-bar select,
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+  }
+
+  /* Grids de eventos */
+  .event-grid {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 1rem;
+  }
+
+  /* Cartas de eventos */
+  .event-card {
+    height: 180px;
+    font-size: 0.9rem;
+  }
+
+  /* Chat flotante */
+  .chat-float {
+    width: 90%;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+
+  .chat-float.closed {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Secciones de texto */
+  .destacados h2,
+  .mas-eventos h2,
+  .about-hero h1,
+  .about-purpose h2,
+  .faq-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-hero p,
+  .about-purpose p,
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes de imágenes de fondo */
+  .event-card {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* Tablets (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .search-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-card {
+    height: 200px;
+    font-size: 1rem;
+  }
+
+  .chat-float {
+    width: 250px;
+  }
+}

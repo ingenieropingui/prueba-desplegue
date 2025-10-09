@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f4f4f8; /* tono más elegante que el blanco puro */
+  color: #222;
+}
+
+/* HERO */
+.about-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fbbf24, #f97316); /* degradado cálido */
+  color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 12px;
+}
+.about-hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.about-hero p {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #fdf6f0;
+}
+
+/* PROPÓSITO */
+.about-purpose {
+  max-width: 1000px;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.about-purpose .text h2 {
+  font-size: 2rem;
+  color: #d97706;
+  margin-bottom: 1rem;
+}
+.about-purpose .text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+.about-purpose .image {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  background-image: url('../imagenes/Nosotros2.jpg'); /* Cambia URL aquí */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  border: 2px solid #fbbf24; /* borde elegante */
+}
+
+/* FAQ */
+.faq-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+.faq-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #f97316;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+.faq-item {
+  background: #fff;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #d97706;
+}
+.faq-answer {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 4rem;
+  background: linear-gradient(135deg, #111, #333); /* degradado elegante */
+  color: #eee;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2.5rem;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+}
+.footer h4 {
+  color: #fbbf24;
+  margin-bottom: 0.8rem;
+}
+.footer p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.about {
+  background: #f4f4f8 !important;
+  min-height: 100vh;
+}
+
+/* =================== MEDIA QUERIES GENERALES =================== */
+
+/* Móviles (pantallas hasta 768px) */
+@media (max-width: 768px) {
+
+  .principal-container,
+  .about,
+  .main-content {
+    padding: 1rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .search-bar select,
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .event-card {
+    height: 180px;
+    font-size: 0.9rem;
+  }
+
+  .chat-float {
+    width: 90%;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+
+  .chat-float.closed {
+    width: 50px;
+    height: 50px;
+  }
+
+  .destacados h2,
+  .mas-eventos h2,
+  .about-hero h1,
+  .about-purpose h2,
+  .faq-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-hero p,
+  .about-purpose p,
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  .about-purpose {
+    grid-template-columns: 1fr;
+  }
+
+  .about-purpose .image {
+    height: 200px;
+  }
+
+  .event-card {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* Tablets (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .search-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-card {
+    height: 200px;
+    font-size: 1rem;
+  }
+
+  .chat-float {
+    width: 250px;
+  }
+}
+

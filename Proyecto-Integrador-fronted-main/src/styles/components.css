@@ -1,0 +1,166 @@
+/* Hero principal */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f97316 30%, #fff 90%);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: rgba(249, 115, 22, 0.9);
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #d65c0b;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn.small {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* Sección de eventos */
+.eventos {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 280px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #f97316;
+  margin-bottom: 0.5rem;
+}
+/* =================== MEDIA QUERIES GENERALES =================== */
+
+/* Móviles (pantallas hasta 768px) */
+@media (max-width: 768px) {
+
+  /* Ajustar contenedores generales */
+  .principal-container,
+  .about,
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* Barras de búsqueda / formularios */
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .search-bar select,
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+  }
+
+  /* Grids de eventos */
+  .event-grid {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 1rem;
+  }
+
+  /* Cartas de eventos */
+  .event-card {
+    height: 180px;
+    font-size: 0.9rem;
+  }
+
+  /* Chat flotante */
+  .chat-float {
+    width: 90%;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+
+  .chat-float.closed {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Secciones de texto */
+  .destacados h2,
+  .mas-eventos h2,
+  .about-hero h1,
+  .about-purpose h2,
+  .faq-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-hero p,
+  .about-purpose p,
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes de imágenes de fondo */
+  .event-card {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* Tablets (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .search-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-card {
+    height: 200px;
+    font-size: 1rem;
+  }
+
+  .chat-float {
+    width: 250px;
+  }
+}

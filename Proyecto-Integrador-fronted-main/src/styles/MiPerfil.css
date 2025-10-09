@@ -1,0 +1,155 @@
+.perfil-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.perfil-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ff9933;
+}
+
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.perfil-form label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.perfil-form input {
+  margin-top: 6px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.perfil-form input:focus {
+  border-color: #ff9933;
+  box-shadow: 0 0 6px rgba(255,153,51,0.5);
+  outline: none;
+}
+
+.perfil-form button {
+  background: linear-gradient(90deg, #ffb347, #ff9933);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.perfil-form button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ff9933, #ff6600);
+}
+/* =================== MEDIA QUERIES GENERALES =================== */
+
+/* Móviles (pantallas hasta 768px) */
+@media (max-width: 768px) {
+
+  /* Ajustar contenedores generales */
+  .principal-container,
+  .about,
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* Barras de búsqueda / formularios */
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .search-bar select,
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+  }
+
+  /* Grids de eventos */
+  .event-grid {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 1rem;
+  }
+
+  /* Cartas de eventos */
+  .event-card {
+    height: 180px;
+    font-size: 0.9rem;
+  }
+
+  /* Chat flotante */
+  .chat-float {
+    width: 90%;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+
+  .chat-float.closed {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Secciones de texto */
+  .destacados h2,
+  .mas-eventos h2,
+  .about-hero h1,
+  .about-purpose h2,
+  .faq-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-hero p,
+  .about-purpose p,
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes de imágenes de fondo */
+  .event-card {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* Tablets (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .search-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-card {
+    height: 200px;
+    font-size: 1rem;
+  }
+
+  .chat-float {
+    width: 250px;
+  }
+}

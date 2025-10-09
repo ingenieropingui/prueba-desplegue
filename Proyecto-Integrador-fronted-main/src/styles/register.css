@@ -1,0 +1,136 @@
+.register-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.register-container h2 {
+  margin-bottom: 1.5rem;
+  color: #f97316;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.register-form input {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.register-form input:focus {
+  border-color: #f97316;
+  outline: none;
+}
+
+.register-form .btn {
+  margin-top: 1rem;
+}
+
+.mensaje {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #d65c0b;
+}
+/* =================== MEDIA QUERIES GENERALES =================== */
+
+/* Móviles (pantallas hasta 768px) */
+@media (max-width: 768px) {
+
+  /* Ajustar contenedores generales */
+  .principal-container,
+  .about,
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* Barras de búsqueda / formularios */
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .search-bar select,
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+  }
+
+  /* Grids de eventos */
+  .event-grid {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 1rem;
+  }
+
+  /* Cartas de eventos */
+  .event-card {
+    height: 180px;
+    font-size: 0.9rem;
+  }
+
+  /* Chat flotante */
+  .chat-float {
+    width: 90%;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+
+  .chat-float.closed {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Secciones de texto */
+  .destacados h2,
+  .mas-eventos h2,
+  .about-hero h1,
+  .about-purpose h2,
+  .faq-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-hero p,
+  .about-purpose p,
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes de imágenes de fondo */
+  .event-card {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* Tablets (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .search-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-card {
+    height: 200px;
+    font-size: 1rem;
+  }
+
+  .chat-float {
+    width: 250px;
+  }
+}

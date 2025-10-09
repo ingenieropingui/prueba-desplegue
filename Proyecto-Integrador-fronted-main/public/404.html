@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      (function () {
+        var BASE_PATH = "/prueba-desplegue"; // "" si es sitio en la raíz
+        var l = window.location;
+        var path = l.pathname;
+        if (BASE_PATH && path.indexOf(BASE_PATH) === 0) {
+          path = path.substring(BASE_PATH.length);
+        }
+        var target = BASE_PATH + "/index.html#" + path + l.search + l.hash;
+        l.replace(target);
+      })();
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/prueba-desplegue/index.html" />
+    </noscript>
+  </head>
+  <body></body>
+</html>

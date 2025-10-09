@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LearnIA</title>
-</head>
-<body>
-<div id="root"></div>
-</body>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/prueba-desplegue/">
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <script>
+      // Redirige preservando la ruta al index con hash
+      (function() {
+        var l = window.location;
+        var repo = '/prueba-desplegue';
+        var target = repo + '/#' + l.pathname.replace(repo, '') + l.search + l.hash;
+        l.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
 </html>

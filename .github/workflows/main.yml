@@ -22,12 +22,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
       - run: npm ci
+        working-directory: ./Proyecto-Integrador-fronted-main
       - run: npm run build
+        working-directory: ./Proyecto-Integrador-fronted-main
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build   # Create React App genera 'build'
+          path: ./Proyecto-Integrador-fronted-main/build
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -37,3 +38,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+

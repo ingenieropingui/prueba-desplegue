@@ -1,7 +1,7 @@
 {
   "name": "frontendpi",
   "version": "1.0.0",
-  "homepage": "https://ingenieropingui.github.io/prueba-desplegue",
+  "homepage": "https://www.quehaypahacer.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

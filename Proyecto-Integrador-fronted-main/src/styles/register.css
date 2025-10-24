@@ -49,9 +49,9 @@
 
 .field-error{ color:#b91c1c; font-size:0.85rem; margin-top:6px }
 
-.terms-row, .newsletter-row{ display:flex; gap:10px; align-items:center; margin-top:8px; justify-content:center }
-.terms-text{ font-size:0.95rem; text-align:center }
-.link-like{ background:none; border:none; color:#0b69ff; text-decoration:underline; cursor:pointer; padding:0; font:inherit }
+.terms-row, .newsletter-row{ display:flex; gap:10px; align-items:flex-start; justify-content:center; margin-top:12px; padding: 0 1rem; }
+.terms-text{ font-size:0.95rem; text-align:center; line-height: 1.5; }
+.link-like{ background:none; border:none; color:#f97316; text-decoration:underline; cursor:pointer; padding:0; font:inherit; font-weight: 600; }
 
 .mensaje{ margin-top:1rem; font-weight:600; color:#0b6b3b }
 

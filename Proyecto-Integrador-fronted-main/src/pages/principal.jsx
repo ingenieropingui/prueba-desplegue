@@ -1,6 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/principal.css";
 import ChatBotUI from '../components/ChatBotUI';
+import { 
+  getAllEvents, 
+  getCities, 
+  getCategories, 
+  filterEvents, 
+  getFeaturedEvents,
+  formatDate,
+  openEventURL 
+} from '../utils/eventsUtils';
 
 const Principal = () => {
   const [messages, setMessages] = useState([
@@ -11,97 +20,171 @@ const Principal = () => {
 
   // Estado para el evento activo
   const [eventoActivo, setEventoActivo] = useState(null);
+  
+  // Estados para filtros y eventos
+  const [filters, setFilters] = useState({
+    ciudad: '',
+    categoria: '',
+    fecha: '',
+    searchTerm: ''
+  });
+  const [eventosDestacados, setEventosDestacados] = useState([]);
+  const [masEventos, setMasEventos] = useState([]);
+  const [allCities, setAllCities] = useState([]);
+  const [allCategories, setAllCategories] = useState([]);
+  const [hasSearched, setHasSearched] = useState(false);
+  const [favoritos, setFavoritos] = useState([]);
 
-  const sendMessage = () => {
-    if (!input.trim()) return;
-    setMessages([...messages, { sender: "user", text: input }]);
-    setInput("");
+  // Cargar datos iniciales
+  useEffect(() => {
+    setAllCities(getCities());
+    setAllCategories(getCategories());
+    setEventosDestacados(getFeaturedEvents(3));
+    // Cargar más eventos (excluyendo los destacados)
+    const featured = getFeaturedEvents(3);
+    const featuredIds = featured.map(e => `${e.nombre}-${e.fecha}`);
+    const all = getAllEvents();
+    const more = all.filter(e => !featuredIds.includes(`${e.nombre}-${e.fecha}`)).slice(0, 6);
+    setMasEventos(more);
+    
+    // Cargar favoritos desde localStorage
+    const savedFavoritos = localStorage.getItem('eventosFavoritos');
+    if (savedFavoritos) {
+      setFavoritos(JSON.parse(savedFavoritos));
+    }
+  }, []);
 
-    // Simulación de respuesta IA
-    setTimeout(() => {
-      setMessages((prev) => [
-        ...prev,
-        { sender: "ia", text: "¡Gracias por tu mensaje! Pronto recibirás información sobre tu evento." },
-      ]);
-    }, 800);
+  // Manejar cambios en los filtros
+  const handleFilterChange = (filterName, value) => {
+    setFilters(prev => ({
+      ...prev,
+      [filterName]: value
+    }));
   };
 
-  // Datos de los eventos destacados
-  const eventosDestacados = [
-    {
-      id: 1,
-      nombre: "Concierto de Rock",
-      categoria: "Música",
-      lugar: "Boom Bogotá",
-      fecha: "3, 10, 17, 24 de septiembre",
-      hora: "9:00 pm",
-      apertura: "7:00 pm",
-      edad: "18 años",
-      precio: "$50.000 + $5.000",
-      aforo: 100,
-    },
-    {
-      id: 2,
-      nombre: "Obra de Teatro",
-      categoria: "Teatro",
-      lugar: "Teatro Nacional",
-      fecha: "5, 12, 19 de septiembre",
-      hora: "7:30 pm",
-      apertura: "6:30 pm",
-      edad: "15 años",
-      precio: "$40.000 + $5.000",
-      aforo: 80,
-    },
-    {
-      id: 3,
-      nombre: "Partido de Fútbol",
-      categoria: "Deporte",
-      lugar: "Estadio Metropolitano",
-      fecha: "6, 13, 20 de septiembre",
-      hora: "6:00 pm",
-      apertura: "5:00 pm",
-      edad: "Todos",
-      precio: "$30.000 + $5.000",
-      aforo: 150,
-    },
-  ];
+  // Aplicar filtros cuando se hace clic en buscar
+  const handleSearch = () => {
+    const filtered = filterEvents(filters);
+    setMasEventos(filtered);
+    setHasSearched(true);
+  };
+
+  // Limpiar filtros
+  const clearFilters = () => {
+    setFilters({
+      ciudad: '',
+      categoria: '',
+      fecha: '',
+      searchTerm: ''
+    });
+    setHasSearched(false);
+    // Recargar eventos iniciales
+    const featured = getFeaturedEvents(3);
+    const featuredIds = featured.map(e => `${e.nombre}-${e.fecha}`);
+    const all = getAllEvents();
+    const more = all.filter(e => !featuredIds.includes(`${e.nombre}-${e.fecha}`)).slice(0, 6);
+    setMasEventos(more);
+  };
+
+  // Abrir evento en nueva pestaña
+  const handleEventClick = (evento) => {
+    if (evento.url) {
+      openEventURL(evento.url);
+    } else {
+      // Si no tiene URL, mostrar detalles
+      setEventoActivo(evento);
+    }
+  };
+
+  // Funciones para manejar favoritos
+  const toggleFavorito = (evento, e) => {
+    e.stopPropagation(); // Evitar que se abra el evento al hacer clic en el corazón
+    
+    const eventoId = `${evento.nombre}-${evento.fecha}`;
+    const isFavorito = favoritos.some(fav => `${fav.nombre}-${fav.fecha}` === eventoId);
+    
+    let newFavoritos;
+    if (isFavorito) {
+      // Remover de favoritos
+      newFavoritos = favoritos.filter(fav => `${fav.nombre}-${fav.fecha}` !== eventoId);
+    } else {
+      // Agregar a favoritos
+      newFavoritos = [...favoritos, evento];
+    }
+    
+    setFavoritos(newFavoritos);
+    localStorage.setItem('eventosFavoritos', JSON.stringify(newFavoritos));
+  };
+
+  const isFavorito = (evento) => {
+    const eventoId = `${evento.nombre}-${evento.fecha}`;
+    return favoritos.some(fav => `${fav.nombre}-${fav.fecha}` === eventoId);
+  };
 
   return (
     <main className="principal-container">
       {/* Barra de búsqueda */}
       <div className="search-bar">
-        <select>
-          <option>Ciudad</option>
-          <option>Bogotá</option>
-          <option>Medellín</option>
-          <option>Cali</option>
+        <select 
+          value={filters.ciudad}
+          onChange={(e) => handleFilterChange('ciudad', e.target.value)}
+        >
+          <option value="">Todas las ciudades</option>
+          {allCities.map(city => (
+            <option key={city} value={city}>{city}</option>
+          ))}
         </select>
-        <select>
-          <option>Categoría</option>
-          <option>Conciertos</option>
-          <option>Teatro</option>
-          <option>Deportes</option>
+        <select
+          value={filters.categoria}
+          onChange={(e) => handleFilterChange('categoria', e.target.value)}
+        >
+          <option value="">Todas las categorías</option>
+          {allCategories.map(cat => (
+            <option key={cat} value={cat}>{cat}</option>
+          ))}
         </select>
-        <input type="date" />
-        <input type="text" placeholder="Buscar por artista, evento..." />
-        <button className="btn-search"></button>
+        <input 
+          type="date" 
+          value={filters.fecha}
+          onChange={(e) => handleFilterChange('fecha', e.target.value)}
+        />
+        <input 
+          type="text" 
+          placeholder="Buscar por artista, evento..." 
+          value={filters.searchTerm}
+          onChange={(e) => handleFilterChange('searchTerm', e.target.value)}
+        />
+        <button className="btn-search" onClick={handleSearch}>Buscar</button>
       </div>
 
-      {/* Eventos destacados */}
-      <section className="destacados">
-        <h2>Eventos Destacados</h2>
-        <div className="event-grid">
-          {eventosDestacados.map((evento) => (
-            <div
-              key={evento.id}
-              className={`event-card ${evento.nombre.toLowerCase().replace(/\s+/g, "")}`}
-              onClick={() => setEventoActivo(evento)}
-            >
-              <h3>{evento.nombre}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Eventos destacados - Solo se muestra cuando NO se ha realizado búsqueda */}
+      {!hasSearched && (
+        <section className="destacados">
+          <h2>Eventos Destacados</h2>
+          <div className="event-grid">
+            {eventosDestacados.map((evento, index) => (
+              <div
+                key={`${evento.nombre}-${index}`}
+                className="event-card"
+                onClick={() => handleEventClick(evento)}
+                style={{ cursor: 'pointer' }}
+              >
+                <button 
+                  className={`favorite-btn ${isFavorito(evento) ? 'active' : ''}`}
+                  onClick={(e) => toggleFavorito(evento, e)}
+                  title={isFavorito(evento) ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+                >
+                  {isFavorito(evento) ? '♥' : '♡'}
+                </button>
+                <h3>{evento.nombre}</h3>
+                <p className="event-category">{evento.categoria}</p>
+                <p className="event-city">{evento.ciudad}</p>
+                <p className="event-date">{formatDate(evento.fecha)}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
      {/* Mini pestaña flotante de detalles */}
 {eventoActivo && (
@@ -112,17 +195,23 @@ const Principal = () => {
       <p className="event-category">{eventoActivo.categoria}</p>
     </div>
     <div className="event-details-body">
-      <p><strong>Lugar:</strong> {eventoActivo.lugar}</p>
-      <p><strong>Fecha:</strong> {eventoActivo.fecha}</p>
-      <p><strong>Hora:</strong> {eventoActivo.hora}</p>
-      <p><strong>Apertura de puertas:</strong> {eventoActivo.apertura}</p>
-      <p><strong>Edad mínima:</strong> {eventoActivo.edad}</p>
+      <p><strong>Ciudad:</strong> {eventoActivo.ciudad}</p>
+      <p><strong>Lugar:</strong> {eventoActivo.lugar || 'Por confirmar'}</p>
+      <p><strong>Fecha:</strong> {formatDate(eventoActivo.fecha)}</p>
+      <p><strong>Hora:</strong> {eventoActivo.hora || 'Por confirmar'}</p>
+      <p><strong>Descripción:</strong> {eventoActivo.descripcion || 'No disponible'}</p>
       <hr />
-      <p><strong>Precio + Servicio:</strong> {eventoActivo.precio}</p>
-      <p><strong>Aforo:</strong> {eventoActivo.aforo}</p>
+      <p><strong>Ingreso:</strong> {eventoActivo.ingreso || 'Consultar'}</p>
     </div>
     <div className="event-details-footer">
-      <button className="btn-buy">Comprar Entradas</button>
+      {eventoActivo.url && (
+        <button 
+          className="btn-buy" 
+          onClick={() => openEventURL(eventoActivo.url)}
+        >
+          Ir al Evento
+        </button>
+      )}
     </div>
   </div>
 )}
@@ -130,27 +219,56 @@ const Principal = () => {
 
       {/* Más eventos */}
       <section className="mas-eventos">
-        <h2>Más Eventos</h2>
-        <div className="event-grid">
-          <div className="event-card jazz">
-            <h3>Festival de Jazz</h3>
-          </div>
-          <div className="event-card arte">
-            <h3>Exposición de Arte</h3>
-          </div>
-          <div className="event-card baile">
-            <h3>Competencia de Baile</h3>
-          </div>
-          <div className="event-card maraton">
-            <h3>Maratón 10K</h3>
-          </div>
-          <div className="event-card pop">
-            <h3>Concierto Pop</h3>
-          </div>
-          <div className="event-card comedy">
-            <h3>Stand Up Comedy</h3>
-          </div>
+        <div className="section-header">
+          <h2>
+            {hasSearched ? 'Resultados de Búsqueda' : 'Más Eventos'}
+          </h2>
+          {hasSearched && (
+            <button 
+              onClick={clearFilters}
+              className="clear-filters-btn"
+            >
+              Limpiar Filtros
+            </button>
+          )}
         </div>
+        {masEventos.length === 0 && hasSearched ? (
+          <div className="empty-state">
+            <h3>No se encontraron eventos</h3>
+            <p>No hay eventos que coincidan con los criterios seleccionados.</p>
+            <p className="empty-state-hint">Intenta ajustar los filtros o buscar en otra ciudad/categoría</p>
+          </div>
+        ) : (
+          <div className="event-grid">
+            {masEventos.slice(0, 12).map((evento, index) => (
+              <div 
+                key={`${evento.nombre}-${index}`}
+                className="event-card"
+                onClick={() => handleEventClick(evento)}
+                style={{ cursor: 'pointer' }}
+              >
+                <button 
+                  className={`favorite-btn ${isFavorito(evento) ? 'active' : ''}`}
+                  onClick={(e) => toggleFavorito(evento, e)}
+                  title={isFavorito(evento) ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+                >
+                  {isFavorito(evento) ? '♥' : '♡'}
+                </button>
+                <h3>{evento.nombre}</h3>
+                <p className="event-category">{evento.categoria}</p>
+                <p className="event-city">{evento.ciudad}</p>
+                <p className="event-date">{formatDate(evento.fecha)}</p>
+              </div>
+            ))}
+          </div>
+        )}
+        {masEventos.length > 12 && (
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <p style={{ color: '#6b7280', fontSize: '0.95rem' }}>
+              Mostrando 12 de {masEventos.length} eventos encontrados
+            </p>
+          </div>
+        )}
       </section>
 
       {/* Chat IA flotante */}

@@ -9,7 +9,7 @@ body {
 .about-hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #fbbf24, #f97316); /* degradado cálido */
+  background: linear-gradient(135deg, #f97316, #fb923c, #fbbf24); /* degradado naranja variado */
   color: #fff;
   border-bottom: 1px solid #eee;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -40,7 +40,7 @@ body {
 }
 .about-purpose .text h2 {
   font-size: 2rem;
-  color: #d97706;
+  color: #ea580c;
   margin-bottom: 1rem;
 }
 .about-purpose .text p {
@@ -56,7 +56,7 @@ body {
   background-size: cover;
   background-position: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  border: 2px solid #fbbf24; /* borde elegante */
+  border: 2px solid #fb923c; /* borde naranja suave */
 }
 
 /* FAQ */
@@ -79,10 +79,11 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #fb923c;
 }
 .faq-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.2);
 }
 .faq-question {
   width: 100%;
@@ -92,7 +93,7 @@ body {
   border: none;
   background: none;
   cursor: pointer;
-  color: #d97706;
+  color: #ea580c;
 }
 .faq-answer {
   margin-top: 0.6rem;
@@ -103,7 +104,7 @@ body {
 /* FOOTER */
 .footer {
   margin-top: 4rem;
-  background: linear-gradient(135deg, #111, #333); /* degradado elegante */
+  background: linear-gradient(135deg, #1f2937, #374151, #4b5563); /* degradado gris oscuro elegante */
   color: #eee;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -122,7 +123,28 @@ body {
 }
 .social-icons {
   display: flex;
-  gap: 0.8rem;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(251, 191, 36, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fbbf24;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: white;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
 }
 
 .about {

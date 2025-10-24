@@ -28,7 +28,7 @@ function passwordStrength(pw) {
 const Register = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    nombres: '', apellidos: '', correo: '', password: '', confirm: '', nacimiento: '', ciudad: '', telefono: '', aceptar: false, newsletter: false
+    nombres: '', apellidos: '', correo: '', password: '', confirm: '', nacimiento: '', ciudad: '', telefono: '', aceptar: false
   });
   const [errors, setErrors] = useState({});
   const [mensaje, setMensaje] = useState('');
@@ -161,15 +161,10 @@ const Register = () => {
           <input type="checkbox" checked={form.aceptar} onChange={e=>setForm({...form,aceptar: e.target.checked})} aria-invalid={!!errors.aceptar} />
           <span className="terms-text">He leído y acepto los <button type="button" className="link-like" onClick={()=>setTermsOpen(true)}>Términos y Condiciones</button> y la <a href="/privacy" target="_blank" rel="noreferrer">Política de Privacidad</a>.</span>
         </label>
-        {errors.aceptar && <div className="field-error">{errors.aceptar}</div>}
-
-        <label className="newsletter-row">
-          <input type="checkbox" checked={form.newsletter} onChange={e=>setForm({...form,newsletter: e.target.checked})} />
-          <span className="terms-text">Deseo recibir novedades y promociones (opcional).</span>
-        </label>
+        {errors.aceptar && <div className="field-error" style={{textAlign: 'center'}}>{errors.aceptar}</div>}
 
         <div className="actions">
-          <button className="btn btn-secondary" type="button" onClick={()=>{ setForm({nombres:'',apellidos:'',correo:'',password:'',confirm:'',nacimiento:'',ciudad:'',telefono:'',rol:'Visitante',aceptar:false,newsletter:false}); setErrors({}); setMensaje(''); }}>Limpiar</button>
+          <button className="btn btn-secondary" type="button" onClick={()=>{ setForm({nombres:'',apellidos:'',correo:'',password:'',confirm:'',nacimiento:'',ciudad:'',telefono:'',aceptar:false}); setErrors({}); setMensaje(''); }}>Limpiar</button>
           <button className="btn btn-primary" type="submit" disabled={!(form.aceptar && form.nombres && form.apellidos && form.correo && form.password && form.confirm)} aria-disabled={!(form.aceptar && form.nombres && form.apellidos && form.correo && form.password && form.confirm)}>Registrarse</button>
         </div>
       </form>

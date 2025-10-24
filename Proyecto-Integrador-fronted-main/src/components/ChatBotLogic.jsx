@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import scrapedEvents from '../data/scrapers_source_fixed.json';
+import scrapedEvents from '../data/scrapers.json';
 
 // Build an indexed structure eventsData[City][Category] => [events]
 // helper: if the imported JSON is already hierarchical ([{ciudad, categoria, eventos: []}, ...])

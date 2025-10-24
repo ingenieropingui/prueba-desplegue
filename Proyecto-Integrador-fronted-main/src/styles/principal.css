@@ -1,9 +1,16 @@
 .principal-container {
   position: relative;
-  padding: 2rem;
-  background: #fafafa;
+  padding: 0; /* full-bleed handled by frontend.improvements.css */
+  background: linear-gradient(180deg,#fbfbfb,#f8fafc);
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+}
+
+/* Reapply inner padding for readable content to avoid touching viewport edges */
+.principal-container > *:not(.chat-float):not(.event-details){
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 
 /* Barra de búsqueda */
@@ -13,6 +20,7 @@
   gap: 12px;
   justify-content: center;
   margin-bottom: 2rem;
+  padding: 1rem 0;
 }
 .search-bar select,
 .search-bar input {
@@ -39,37 +47,35 @@
 /* Eventos */
 .event-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
+  align-items: start;
 }
 .event-card {
-  height: 150px;
+  height: 160px;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1rem;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+  padding: 12px;
 }
-.event-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-}
+.event-card:hover { transform: translateY(-6px); box-shadow: 0 14px 38px rgba(8,20,40,0.08); }
 
 /* Secciones */
 .destacados h2,
 .mas-eventos h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: #d97706;
+  letter-spacing: -0.5px;
 }
 
 /* Chat flotante */
@@ -77,16 +83,16 @@
   position: fixed;
   left: 20px;
   bottom: 20px;
-  width: 280px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  width: 300px;
+  background: linear-gradient(180deg, #ffffff, #fffefc);
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(4,20,40,0.08);
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 12px;
   z-index: 1000;
   font-size: 14px;
-  transition: all 0.3s ease;
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 .chat-float.closed {
   height: 50px;
@@ -111,8 +117,8 @@
   gap: 8px;
   max-height: 300px;
   overflow-y: auto;
-  padding: 10px;
-  background: #fafafa;
+  padding: 8px;
+  background: transparent;
   border-radius: 8px;
   margin-bottom: 12px;
 }
@@ -122,14 +128,38 @@
   max-width: 80%;
 }
 .chat-message.user {
-  background: #ffb347;
-  color: #fff;
+  background: #f1f8ff;
+  color: #06283d;
   align-self: flex-end;
+  border-radius: 16px;
 }
 .chat-message.ia {
-  background: #fff7e6;
-  color: #333;
+  background: linear-gradient(180deg,#ff6a00,#ff7f2a);
+  color: #fff;
   align-self: flex-start;
+  display: block; /* take available width but respect max-width */
+  box-sizing: border-box;
+  max-width: 100%;
+  width: auto;
+  padding: 10px 14px;
+  margin: 6px 0;
+  line-height: 1.35;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(249,115,22,0.18);
+  white-space: pre-wrap; /* keep line breaks */
+  word-break: break-word; /* break long words/urls */
+  overflow-wrap: anywhere; /* robust wrapping for long URLs */
+  hyphens: auto;
+}
+
+/* Make event cards inside chat visually clickable */
+.chat-message.event-card {
+  cursor: pointer;
+}
+
+.chat-message.event-card .event-card-content a {
+  color: #fff;
+  text-decoration: underline;
 }
 .chat-input {
   display: flex;
@@ -213,6 +243,13 @@
     bottom: 10px;
     transform: translateX(-50%);
     font-size: 13px;
+  }
+
+  /* Ensure IA messages fill available width on small screens */
+  .chat-message.ia {
+    max-width: 92% !important;
+    width: auto !important;
+    padding: 10px 14px !important;
   }
 
   .chat-float.closed {
@@ -462,6 +499,19 @@
   background: #f97316;
   color: #fff;
   align-self: flex-start;
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: auto;
+  padding: 10px 14px;
+  margin: 6px 0;
+  line-height: 1.35;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(249,115,22,0.14);
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .chat-input {

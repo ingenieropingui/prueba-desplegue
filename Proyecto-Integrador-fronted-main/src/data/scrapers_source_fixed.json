@@ -1,0 +1,71 @@
+[
+  {
+    "ciudad": "Medellín",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Ritvales 2025",
+        "fecha": "2025-11-01",
+        "hora": "2:00 p.m.",
+        "lugar": "Parque Norte",
+        "descripcion": "Festival de música electrónica al aire libre con DJs nacionales e internacionales.",
+        "ingreso": "Costo",
+        "url": "https://ticketlive.com.co/co/festivales/ritvales-2025-1-y-2-noviembre-2025-medellin/"
+      },
+      {
+        "nombre": "J Balvin en concierto",
+        "fecha": "2025-11-29",
+        "hora": "8:00 p.m.",
+        "lugar": "Estadio Atanasio Girardot",
+        "descripcion": "Concierto del artista colombiano J Balvin en su ciudad natal.",
+        "ingreso": "Costo",
+        "url": "https://ticketlive.com.co/co/conciertos/j-balvin-en-medellin-30-noviembre-2024/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Deportes",
+    "eventos": [
+      {
+        "nombre": "Maratón Internacional de Bucaramanga",
+        "fecha": "2025-11-09",
+        "hora": "7:00 a.m.",
+        "lugar": "Parque García Rovira",
+        "descripcion": "Carrera de 42K, 21K y 10K con participación internacional.",
+        "ingreso": "Costo",
+        "url": "https://www.maratonbucaramanga.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Cali",
+    "categoria": "Conciertos",
+    "eventos": [
+      {
+        "nombre": "Residente - Las Letras Ya No Importan Tour",
+        "fecha": "2025-11-24",
+        "hora": "8:00 p.m.",
+        "lugar": "Arena Cañaveralejo",
+        "descripcion": "El ex Calle 13 presenta su tour mundial en Cali con su característico rap consciente.",
+        "ingreso": "Costo",
+        "url": "https://conciertosencali.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bogotá",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Festival de Jazz al Parque",
+        "fecha": "2025-11-14",
+        "hora": "3:00 p.m.",
+        "lugar": "Parque Simón Bolívar",
+        "descripcion": "Festival gratuito de jazz con artistas nacionales e internacionales.",
+        "ingreso": "Gratis",
+        "url": "https://www.idartes.gov.co/"
+      }
+    ]
+  }
+]

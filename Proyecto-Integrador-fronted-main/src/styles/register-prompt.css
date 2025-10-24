@@ -1,0 +1,14 @@
+.rp-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display:flex; align-items:center; justify-content:center; z-index:1200; }
+.rp-modal { background:#fff; padding:18px; border-radius:10px; width:320px; max-width:90%; box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+.rp-actions { display:flex; gap:8px; justify-content:flex-end; margin-top:12px; }
+.rp-btn { padding:8px 12px; border-radius:8px; border:1px solid #ddd; background:#fff; cursor:pointer; }
+.rp-btn.rp-primary { background:#ff7a00; color:#fff; border:none; }
+/* Minimal modal styles for register prompt - scoped and non-disruptive */
+.rp-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,0.45); display:flex; align-items:center; justify-content:center; z-index:3000 }
+.rp-modal{ background:#fff; color:#111; padding:1rem 1.25rem; border-radius:8px; width:min(420px, calc(100% - 2rem)); box-shadow:0 12px 32px rgba(0,0,0,0.25) }
+.rp-modal h3{ margin:0 0 0.5rem }
+.rp-modal p{ margin:0 0 1rem; color:#333 }
+.rp-actions{ display:flex; gap:0.5rem; justify-content:flex-end }
+.rp-btn{ padding:8px 12px; border-radius:6px; border:1px solid #ccc; background:#fff; cursor:pointer }
+.rp-btn.rp-primary{ background:var(--main-color,#ff6a00); color:#fff; border:none }
+.rp-btn:focus{ outline:3px solid rgba(255,106,0,0.25) }

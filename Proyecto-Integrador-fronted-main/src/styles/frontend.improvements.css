@@ -1,0 +1,80 @@
+
+/* Clean frontend improvements and responsive tweaks */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Mobile-first layout */
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin:0; padding:0; }
+.main-content { padding: 0 1rem; max-width: var(--max-content-width, 1200px); margin: 0 auto; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+button { min-height: 40px; min-width: 44px; }
+
+.full-bleed { width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
+
+input, select, textarea { font-size: 1rem; }
+
+.App{ box-sizing: border-box; width:100%; max-width:100%; margin:0; padding-left: 0; padding-right: 0; }
+
+@media (max-width: 640px) {
+  .principal-container{ box-sizing: border-box; width: 100%; max-width: 100%; margin: 0; padding: 0; background: var(--bg-100, #fafafa); }
+  .main-content { padding: 0 0.75rem; }
+  .btn { padding: 10px 12px; }
+}
+
+.principal-container > *:not(.chat-float):not(.event-details){
+  max-width: var(--max-content-width, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+.hero, .hero-image, .banner, .banner-image { width:100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); display:block; }
+
+.container, .wrapper { padding-left: 1rem; padding-right: 1rem; box-sizing: border-box; }
+
+.principal-container{
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+.principal-container > *:not(.chat-float):not(.event-details){ padding-left: 1rem; padding-right: 1rem; }
+
+.event-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+.event-card{ min-height: 80px; display:flex; align-items:center; justify-content:center; padding:0.75rem; border-radius: var(--radius-md); overflow:hidden; }
+
+.btn, button{ font-family: var(--font-sans); border-radius: var(--radius-sm); }
+.btn-primary{ background: linear-gradient(90deg,var(--primary-500),var(--primary-300)); color: #fff; padding: 10px 14px; border-radius: 10px; }
+
+.chat-float{ position: fixed; right: 1rem; bottom: 1rem; z-index: 1000; }
+.chat-float.open .chat-ventana{ width: min(360px, calc(100vw - 2rem)); max-height: 70vh; }
+.chat-float.closed .chat-ventana{ height:0; opacity:0; pointer-events:none; }
+.chat-ventana{ box-shadow: 0 8px 24px rgba(0,0,0,0.2); border-radius:8px; }
+.chat-box.chat-mensajes{ max-height: 48vh; overflow:auto; padding:0.5rem; display:flex; flex-direction:column; gap:6px }
+.chat-input{ display:flex; gap:0.5rem; padding:0.5rem; }
+.chat-input-field{ flex:1; min-height:44px; }
+.chat-send{ min-height:44px; min-width:64px }
+
+button:focus{ box-shadow: 0 0 0 3px rgba(255,106,0,0.25); }
+
+@media (min-width: 640px){
+  .event-grid{ grid-template-columns: repeat(3,1fr); }
+  html{ font-size:15px }
+}
+@media (min-width: 1024px){
+  .event-grid{ grid-template-columns: repeat(4,1fr); }
+  .chat-float.open .chat-ventana{ width:360px; }
+  html{ font-size:16px }
+}
+@media (min-width:1280px){
+  .event-grid{ grid-template-columns: repeat(4,1fr); }
+  html{ font-size:16px }
+}

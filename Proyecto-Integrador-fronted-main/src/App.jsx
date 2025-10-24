@@ -11,6 +11,11 @@ import Contact from './pages/Contact';
 import About from './pages/about';
 import Principal from './pages/principal';
 import './styles/App.css';
+// Theme variables for design touchup (fonts, colors, sizes). Safe global import.
+import './styles/_theme.css';
+// Frontend improvements and responsive overrides (mobile-first).
+// NOTE: This import adds non-disruptive, scoped CSS only. Do NOT remove unless reverting changes described in README_FRONTEND_IMPROVEMENTS.md
+import './styles/frontend.improvements.css';
 
 function App() {
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/principal.css";
+import ChatBotUI from '../components/ChatBotUI';
 
 const Principal = () => {
   const [messages, setMessages] = useState([
@@ -153,33 +154,7 @@ const Principal = () => {
       </section>
 
       {/* Chat IA flotante */}
-      <div className={`chat-float ${chatOpen ? "open" : "closed"}`}>
-        <button className="toggle-chat" onClick={() => setChatOpen(!chatOpen)}>
-          {chatOpen ? "❌" : "💬"}
-        </button>
-        {chatOpen && (
-          <>
-            <h3>Asistente IA</h3>
-            <div className="chat-box">
-              {messages.map((msg, index) => (
-                <div key={index} className={`chat-message ${msg.sender}`}>
-                  {msg.text}
-                </div>
-              ))}
-            </div>
-            <div className="chat-input">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Escribe tu mensaje..."
-                onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-              />
-              <button onClick={sendMessage}>Enviar</button>
-            </div>
-          </>
-        )}
-      </div>
+      <ChatBotUI />
     </main>
   );
 };

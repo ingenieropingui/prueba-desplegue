@@ -1,0 +1,211 @@
+/* Minimal overrides for the floating chat to ensure proper layout and visibility */
+.chat-float { position: fixed; right: 16px; bottom: 16px; z-index: 1000; font-family: Arial, sans-serif; }
+.chat-float .toggle-chat { background: #ff7a00; color: #fff; border-radius: 50%; width:48px; height:48px; border:none; cursor:pointer; }
+.chat-ventana { width: 320px; max-width: calc(100vw - 32px); background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); overflow: hidden; display:flex; flex-direction:column; }
+.chat-title { margin: 0; padding: 12px 14px; background: #ff7a00; color: #fff; font-weight:600; }
+.chat-mensajes { padding: 12px; overflow-y: auto; flex: 1 1 auto; min-height: 0; }
+.chat-actions { padding: 8px; border-top: 1px solid #eee; background: #fff; }
+.chat-input { display:flex; gap:8px; align-items:center; }
+.chat-input-field { flex:1; padding:8px 10px; border:1px solid #ddd; border-radius:8px; }
+.chat-send { background:#ff7a00; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+.chat-message.ia { background:#f7f7f7; padding:8px 10px; margin-bottom:8px; border-radius:8px; }
+.chat-message.user { text-align:right; background: #e6f7ff; padding:6px 10px; margin-bottom:8px; border-radius:8px; }
+.typing-dots span { display:inline-block; width:6px; height:6px; margin-right:4px; background:#ccc; border-radius:50%; animation:blink 1s infinite; }
+@keyframes blink { 0%{opacity:.2}50%{opacity:1}100%{opacity:.2} }
+
+@media (max-width:420px) {
+  .chat-ventana { width: 100%; right:0; left:0; bottom:0; border-radius: 12px 12px 0 0; }
+}
+@import './_theme.css';
+
+/* Chat touchup: use theme variables and subtle, human-friendly styling. */
+.chat-float .chat-message.ia.options {
+  background: transparent; /* keep base bubble but style options container */
+  padding: 10px 12px;
+}
+.chat-float .options-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.chat-float .option-btn {
+  background: var(--primary-500);
+  color: var(--bot-text);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: transform 220ms ease, box-shadow 220ms ease, opacity 160ms ease;
+  box-shadow: var(--shadow-1);
+}
+.chat-float .option-btn:hover { transform: translateY(-2px); opacity: 0.98; box-shadow: var(--shadow-2); }
+
+.chat-float .chat-message.ia.typing { background: transparent; padding: 6px 10px; }
+.chat-float .typing-dots{ display:inline-flex; gap:6px; align-items:center; padding:6px 10px; background: rgba(255,255,255,0.02); border-radius:12px; }
+.chat-float .typing-dots span{ display:inline-block; width:7px; height:7px; background:rgba(255,255,255,0.6); border-radius:50%; animation: dot 1.05s infinite ease-in-out; }
+.chat-float .typing-dots span:nth-child(2){ animation-delay:0.18s }
+.chat-float .typing-dots span:nth-child(3){ animation-delay:0.36s }
+@keyframes dot{ 0%{transform:translateY(0); opacity:0.35}50%{transform:translateY(-4px); opacity:1}100%{transform:translateY(0); opacity:0.35} }
+
+.chat-float .event-card { margin: 10px 0; padding: 12px; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow: var(--shadow-1); }
+.chat-float .event-card .event-name{ font-weight:700; font-size: var(--fs-md); margin-bottom:6px }
+.chat-float .event-meta{ font-size: var(--fs-sm); color: var(--muted-600); display:flex; gap:8px; align-items:center }
+
+/* ensure input send button uses theme color and accessible focus */
+.chat-float .chat-send { background: var(--primary-500); color:var(--bot-text); border:none; padding:8px 14px; border-radius:10px; cursor:pointer; box-shadow: var(--shadow-1); transition: transform 200ms ease; }
+.chat-float .chat-send:focus{ outline: 3px solid rgba(255,106,0,0.18); }
+.chat-float .chat-send:hover{ transform: translateY(-2px); }
+
+/* User bubble: softer, with contrast and generous rounding */
+.chat-float .chat-message.user {
+  background: var(--user-bubble);
+  color: #06283d;
+  align-self: flex-end;
+  border-radius: 18px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  box-shadow: 0 6px 18px rgba(4,20,40,0.04);
+}
+
+.chat-float .chat-message.ia {
+  background: var(--bot-bubble);
+  color: var(--bot-text);
+  align-self: flex-start;
+  border-radius: 18px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  box-shadow: 0 10px 30px rgba(255,100,32,0.08);
+}
+
+/* subtle entrance animation for messages */
+.chat-float .chat-message{ animation: enterMsg 320ms ease both; }
+@keyframes enterMsg{ from{ opacity:0; transform: translateY(8px) } to{ opacity:1; transform: translateY(0) } }
+
+/* responsive: make chat float more compact on small screens */
+@media (max-width: 640px){
+  .chat-float{ width: 92vw; right: 4vw; bottom: 4vh; border-radius: 14px }
+  .chat-float .option-btn{ padding: 8px 10px; font-size: 0.9rem }
+}
+
+/* Ensure the chat window layout preserves footer and makes messages scrollable */
+.chat-float { z-index: 1100; }
+.chat-float .chat-ventana { display: flex; flex-direction: column; width: min(360px, calc(100vw - 2rem)); max-height: 70vh; box-sizing: border-box; }
+.chat-float .chat-mensajes, .chat-float .chat-box { flex: 1 1 auto; overflow: auto; max-height: none; padding: 10px; }
+.chat-float .chat-actions, .chat-float .chat-footer { flex: 0 0 auto; }
+
+/* Make sure option buttons receive pointer events and are keyboard accessible */
+.chat-float .options-buttons { pointer-events: auto; }
+.chat-float .option-btn { pointer-events: auto; }
+
+/* When chat is closed, keep small button visible */
+.chat-float.closed { overflow: visible; }
+
+/* Chat window layout: ensure messages area scrolls and footer stays visible */
+.chat-float .chat-ventana{ display:flex; flex-direction:column; width: min(380px, calc(100vw - 2rem)); max-height: 72vh; background: transparent; box-sizing: border-box; }
+.chat-float .chat-title{ margin:0; padding:10px 12px; background: var(--primary-500); color: var(--bot-text); border-radius: 8px 8px 0 0; font-weight:600; text-align:center }
+.chat-float .chat-mensajes{ flex:1 1 auto; overflow:auto; padding: 10px 12px; background: transparent; }
+
+/* Chat actions (input + footer) sticks to bottom of chat-ventana */
+.chat-float .chat-actions{ flex:0 0 auto; padding: 10px 12px; background: rgba(255,255,255,0.02); display:flex; flex-direction:column; gap:8px }
+.chat-float .chat-input{ display:flex; gap:8px; align-items:center }
+.chat-float .chat-input-field{ flex:1 1 auto; padding:10px 12px; border-radius:10px; border:1px solid rgba(0,0,0,0.08); font-size:0.95rem }
+.chat-float .chat-send{ padding:10px 14px; border-radius:10px; background:var(--primary-500); color:var(--bot-text); border:none; cursor:pointer; box-shadow:var(--shadow-1) }
+.chat-float .chat-send:disabled{ opacity:0.6; cursor:not-allowed }
+
+/* Footer row inside chat - align and style restart button */
+.chat-float .chat-footer{ display:flex; justify-content:space-between; align-items:center; gap:8px }
+.chat-float .restart-btn{ background:#fff; color:var(--primary-500); border-radius:8px; padding:8px 10px; border:1px solid rgba(0,0,0,0.06); cursor:pointer }
+.chat-float .current-state{ font-size:0.85rem; color:var(--muted-600); }
+
+/* Mobile: make chat full-widthish and inputs touch-friendly */
+@media (max-width: 640px){
+  .chat-float .chat-ventana{ width: calc(100vw - 2rem); max-height: 80vh }
+  .chat-float .chat-send{ min-width:64px }
+  .chat-float .restart-btn{ padding:10px 12px }
+}
+
+/* ===================== STRONG LAYOUT OVERRIDES ======================
+   These rules intentionally ensure the floating chat uses a column flex
+   layout where the message area can shrink/scroll correctly and the
+   input/footer stay visible. They are conservative but specific so they
+   don't rename required selectors used elsewhere.
+*/
+
+/* Make sure the root float is a flex container and the chat window
+   uses a column layout so footer/input can stay pinned to the bottom */
+.chat-float {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important; /* keep toggle aligned */
+}
+
+/* Chat window must be a column with bounded height and allow children
+   to control their own overflow. Use min-height:0 on flex children so
+   overflow:auto works as expected in modern browsers. */
+.chat-float .chat-ventana {
+  display: flex !important;
+  flex-direction: column !important;
+  width: min(380px, calc(100vw - 2rem)) !important;
+  max-height: 80vh !important;
+  box-sizing: border-box !important;
+  pointer-events: auto !important;
+}
+
+.chat-float .chat-mensajes,
+.chat-float .chat-box {
+  flex: 1 1 auto !important;
+  min-height: 0 !important; /* critical: allows proper scrolling inside flex */
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 10px 12px !important;
+}
+
+/* Actions/footer remain visible and don't get pushed out of view */
+.chat-float .chat-actions,
+.chat-float .chat-footer {
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+
+/* Input layout: ensure the input can shrink on small screens and the
+   send button stays visible. min-width:0 prevents flex children from
+   overflowing parents. */
+.chat-float .chat-input { display:flex !important; gap:8px !important; align-items:center !important; }
+.chat-float .chat-input-field { flex: 1 1 auto !important; min-width: 0 !important; padding:10px 12px !important; }
+.chat-float .chat-send { flex: 0 0 auto !important; margin-left:6px !important; z-index: 3 !important; }
+
+/* Make sure option buttons are not blocked by overlays and respond to clicks */
+.chat-float .options-buttons,
+.chat-float .option-btn { pointer-events: auto !important; }
+.chat-float .option-btn { touch-action: manipulation !important; }
+
+/* Ensure the restart button and current state are fully visible */
+.chat-float .chat-footer { padding-top: 8px !important; padding-bottom: 10px !important; }
+.chat-float .restart-btn { white-space: nowrap !important; }
+
+/* Force visible background and avoid accidental clipping from other styles */
+.chat-float .chat-ventana, .chat-float .chat-actions { background-clip: padding-box !important; }
+
+/* Small-screen adjustment: make chat nearly full width for easier typing */
+@media (max-width: 520px) {
+  .chat-float { right: 4vw !important; left: auto !important; bottom: 3vh !important; }
+  .chat-float .chat-ventana { width: calc(100vw - 2rem) !important; max-height: 85vh !important; }
+  .chat-float .chat-input-field { font-size: 1rem !important; padding: 12px !important; }
+}
+
+/* End overrides */
+
+/* Anchor the open chat to bottom-right to avoid being pushed by event-details */
+.chat-float.open {
+  right: 20px !important;
+  left: auto !important;
+  bottom: 20px !important;
+  width: min(380px, calc(100vw - 2rem)) !important;
+}
+
+/* Make sure the toggle stays above everything and remains clickable */
+.chat-float .toggle-chat { z-index: 12 !important; }
+.chat-float .chat-ventana { z-index: 11 !important; }
+

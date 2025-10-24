@@ -1,0 +1,1000 @@
+[
+  {
+    "ciudad": "Medellín",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Ritvales 2025",
+        "fecha": "2025-11-01",
+        "hora": "2:00 p.m.",
+        "lugar": "Parque Norte",
+        "descripcion": "Festival de música electrónica al aire libre con DJs nacionales e internacionales.",
+        "ingreso": "Costo",
+        "url": "https://ticketlive.com.co/co/festivales/ritvales-2025-1-y-2-noviembre-2025-medellin/"
+      },
+      {
+        "nombre": "J Balvin en concierto",
+        "fecha": "2025-11-29",
+        "hora": "8:00 p.m.",
+        "lugar": "Estadio Atanasio Girardot",
+        "descripcion": "Concierto del artista colombiano J Balvin en su ciudad natal.",
+        "ingreso": "Costo",
+        "url": "https://ticketlive.com.co/co/conciertos/j-balvin-en-medellin-30-noviembre-2024/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Deportes",
+    "eventos": [
+      {
+        "nombre": "Maratón Internacional de Bucaramanga",
+        "fecha": "2025-11-09",
+        "hora": "7:00 a.m.",
+        "lugar": "Parque García Rovira",
+        "descripcion": "Carrera de 42K, 21K y 10K con participación internacional.",
+        "ingreso": "Costo",
+        "url": "https://www.maratonbucaramanga.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Cali",
+    "categoria": "Conciertos",
+    "eventos": [
+      {
+        "nombre": "Residente - Las Letras Ya No Importan Tour",
+        "fecha": "2025-11-24",
+        "hora": "8:00 p.m.",
+        "lugar": "Arena Cañaveralejo",
+        "descripcion": "El ex Calle 13 presenta su tour mundial en Cali con su característico rap consciente.",
+        "ingreso": "Costo",
+        "url": "https://conciertosencali.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bogotá",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Festival de Jazz al Parque",
+        "fecha": "2025-11-14",
+        "hora": "3:00 p.m.",
+        "lugar": "Parque Simón Bolívar",
+        "descripcion": "Festival gratuito de jazz con artistas nacionales e internacionales.",
+        "ingreso": "Gratis",
+        "url": "https://www.idartes.gov.co/"
+      }
+    ]
+  }
+]
+        "nombre": "Festival Internacional de Salsa de Medellín",
+        "fecha": "2025-11-22",
+        "hora": "7:00 p.m.",
+        "lugar": "Teatro Metropolitano",
+        "descripcion": "Conciertos de salsa con agrupaciones nacionales e internacionales.",
+        "ingreso": "Costo",
+        "url": "https://www.festivalsalsamedellin.com/"
+      },
+      {
+        "nombre": "BLESSD - Trinidad Bendita",
+        "fecha": "2025-11-22",
+        "hora": "8:00 p.m.",
+        "lugar": "Vive Claro Distrito Cultural",
+        "descripcion": "Concierto del artista paisa BLESSD con su tour Siempre Blessd.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Deportes",
+    "eventos": [
+      {
+        "nombre": "Maratón Internacional de Bucaramanga",
+        "fecha": "2025-11-09",
+        "hora": "7:00 a.m.",
+        "lugar": "Parque García Rovira",
+        "descripcion": "Carrera de 42K, 21K y 10K con participación internacional.",
+        "ingreso": "Costo",
+        "url": "https://www.maratonbucaramanga.com/"
+      },
+      {
+        "nombre": "Copa Ciudad Bonita de Fútbol",
+        "fecha": "2025-11-15",
+        "hora": "9:00 a.m.",
+        "lugar": "Estadio Alfonso López",
+        "descripcion": "Torneo de fútbol con equipos locales y nacionales.",
+        "ingreso": "Gratis",
+        "url": "https://www.copaciudadbonita.com/"
+      },
+      {
+        "nombre": "Festival de Ciclismo Urbano",
+        "fecha": "2025-11-22",
+        "hora": "10:00 a.m.",
+        "lugar": "Parque de los Niños",
+        "descripcion": "Competencia de ciclismo urbano con categorías para todas las edades.",
+        "ingreso": "Gratis",
+        "url": "https://www.festivalciclismobucaramanga.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Luifer Cuello en Bucaramanga",
+        "fecha": "2025-11-20",
+        "hora": "8:00 p.m.",
+        "lugar": "Santander Theatre",
+        "descripcion": "Concierto de salsa y tropical con Luifer Cuello en el Santander Theatre.",
+        "ingreso": "Costo",
+        "url": "https://www.shazam.com/es-mx/events/bucaramanga-santander-colombia"
+      },
+      {
+        "nombre": "El Baile del Año 2025",
+        "fecha": "2025-11-22",
+        "hora": "9:00 p.m.",
+        "lugar": "Centro de Convenciones Neomundo",
+        "descripcion": "Gran evento de música tropical y popular con varios artistas invitados.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "Festival de Música Andina Colombiana",
+        "fecha": "2025-11-14",
+        "hora": "6:00 p.m.",
+        "lugar": "Teatro Santander",
+        "descripcion": "Festival dedicado a la música tradicional andina con artistas de la región.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "Alejandro Fernández en Bucaramanga",
+        "fecha": "2025-11-30",
+        "hora": "8:00 p.m.",
+        "lugar": "Plaza de Toros",
+        "descripcion": "El Potrillo trae su gira México Lindo y Querido a Bucaramanga.",
+        "ingreso": "Costo",
+        "url": "https://canaltrece.com.co/noticias/conciertos-en-colombia-2025/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Teatro",
+    "eventos": [
+      {
+        "nombre": "Romeo y Julieta",
+        "fecha": "2025-11-08",
+        "hora": "7:00 p.m.",
+        "lugar": "Teatro Santander",
+        "descripcion": "Adaptación moderna de la obra clásica de William Shakespeare.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "El Misántropo",
+        "fecha": "2025-11-16",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Cultural Peralta",
+        "descripcion": "Comedia de Molière adaptada al contexto colombiano contemporáneo.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "Jhovanoty - Puro Show",
+        "fecha": "2025-11-25",
+        "hora": "7:30 p.m.",
+        "lugar": "Centro de Eventos CENFER",
+        "descripcion": "Espectáculo de humor con Jhovanoty y sus personajes más queridos.",
+        "ingreso": "Costo",
+        "url": "https://latiquetera.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Culturales",
+    "eventos": [
+      {
+        "nombre": "Feria Artesanal de Bucaramanga",
+        "fecha": "2025-11-12",
+        "hora": "10:00 a.m.",
+        "lugar": "Parque del Agua",
+        "descripcion": "Exposición de artesanías locales y regionales con música folclórica en vivo.",
+        "ingreso": "Gratis",
+        "url": "https://www.turismobucaramanga.com/"
+      },
+      {
+        "nombre": "Festival Gastronómico de Santander",
+        "fecha": "2025-11-18",
+        "hora": "11:00 a.m.",
+        "lugar": "Centro Comercial Cacique",
+        "descripcion": "Muestra gastronómica con platos típicos de la región santandereana.",
+        "ingreso": "Gratis",
+        "url": "https://www.turismobucaramanga.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Conciertos",
+    "eventos": [
+      {
+        "nombre": "Festival de Rock Bumangués",
+        "fecha": "2025-11-28",
+        "hora": "6:00 p.m.",
+        "lugar": "Parque San Pío",
+        "descripcion": "Festival de rock con bandas locales y nacionales.",
+        "ingreso": "Gratis",
+        "url": "https://www.turismobucaramanga.com/"
+      },
+      {
+        "nombre": "Marcos Witt - Tour Legado",
+        "fecha": "2025-11-10",
+        "hora": "7:00 p.m.",
+        "lugar": "CENFER",
+        "descripcion": "Concierto del reconocido cantante de música cristiana con 39 años de trayectoria.",
+        "ingreso": "Costo",
+        "url": "https://special.checkout.tuboleta.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Cali",
+    "categoria": "Deportes",
+    "eventos": [
+      {
+        "nombre": "Carrera Río Cali 2025",
+        "fecha": "2025-11-30",
+        "hora": "7:00 a.m.",
+        "lugar": "Río Cali",
+        "descripcion": "Competencia atlética tradicional de Cali con varias categorías de distancia.",
+        "ingreso": "Costo",
+        "url": "https://occidente.co/cali/eventos-en-cali-2025-agenda-turistica/"
+      },
+      {
+        "nombre": "Copa América de Boccia",
+        "fecha": "2025-11-14",
+        "hora": "9:00 a.m.",
+        "lugar": "Coliseo El Pueblo",
+        "descripcion": "Competencia paralímpica de precisión con equipos de toda América.",
+        "ingreso": "Gratis",
+        "url": "https://occidente.co/cali/eventos-en-cali-2025-agenda-turistica/"
+      },
+      {
+        "nombre": "Torneo de Fútbol Sala Caleño",
+        "fecha": "2025-11-22",
+        "hora": "8:00 a.m.",
+        "lugar": "Complejo Deportivo La Flora",
+        "descripcion": "Torneo de fútbol sala con equipos de toda la región pacífica.",
+        "ingreso": "Gratis",
+        "url": "https://www.cali.gov.co/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Cali",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Festival Mundial de Salsa Cali",
+        "fecha": "2025-11-08",
+        "hora": "6:00 p.m.",
+        "lugar": "Coliseo El Pueblo",
+        "descripcion": "El festival de salsa más importante del mundo con bailarines internacionales.",
+        "ingreso": "Costo",
+        "url": "https://www.turismocity.com.co/promociones_aereas/p-los_mejores_festivales_de_colombia_para_disfrutar_en_el_2025-7473.html"
+      },
+      {
+        "nombre": "Juliana Cali - La Pista Tour",
+        "fecha": "2025-11-22",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Municipal Enrique Buenaventura",
+        "descripcion": "Concierto de la artista colombiana Juliana presentando su nuevo álbum.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "Silvio Rodríguez en Cali",
+        "fecha": "2025-11-02",
+        "hora": "8:00 p.m.",
+        "lugar": "Arena Cañaveralejo",
+        "descripcion": "El legendario cantautor cubano presenta su gira por Colombia.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "Feria de Cali - Superconcierto",
+        "fecha": "2025-11-27",
+        "hora": "3:00 p.m.",
+        "lugar": "Estadio Pascual Guerrero",
+        "descripcion": "Gran concierto de la Feria de Cali con Marc Anthony, La India, El Gran Combo de Puerto Rico y más.",
+        "ingreso": "Costo",
+        "url": "https://www.taquillalive.com/performance-details/?artist=feria-de-cali&event=TCL.EVN939.PRF1"
+      }
+    ]
+  },
+  {
+    "ciudad": "Cali",
+    "categoria": "Teatro",
+    "eventos": [
+      {
+        "nombre": "Pareja Abierta",
+        "fecha": "2025-11-15",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro La Concha",
+        "descripcion": "Adaptación caleña de la famosa obra de Dario Fo y Franca Rama sobre la vida de pareja.",
+        "ingreso": "Costo",
+        "url": "https://teatros.checkout.tuboleta.com/list/events?lang=es/"
+      },
+      {
+        "nombre": "El Lago de los Cisnes sobre Hielo",
+        "fecha": "2025-11-23",
+        "hora": "6:00 p.m.",
+        "lugar": "Teatro Jorge Isaacs",
+        "descripcion": "Ballet clásico combinado con patinaje artístico, una experiencia única sobre pista ecológica.",
+        "ingreso": "Costo",
+        "url": "https://teatros.checkout.tuboleta.com/list/events?lang=es/"
+      },
+      {
+        "nombre": "Stand-up Comedy Caleña",
+        "fecha": "2025-11-29",
+        "hora": "9:00 p.m.",
+        "lugar": "Teatro El Galpón",
+        "descripcion": "Show de comedia con los mejores standuperos de Colombia.",
+        "ingreso": "Costo",
+        "url": "https://teatros.checkout.tuboleta.com/list/events?lang=es/"
+      },
+      {
+        "nombre": "Jovita Feijoó - Unipersonal",
+        "fecha": "2025-11-16",
+        "hora": "7:00 p.m.",
+        "lugar": "Teatro Jorge Isaacs",
+        "descripcion": "Obra sobre la emblemática reina de Cali, un homenaje a una figura icónica de la ciudad.",
+        "ingreso": "Costo",
+        "url": "https://teatros.checkout.tuboleta.com/list/events?lang=es/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Cali",
+    "categoria": "Culturales",
+    "eventos": [
+      {
+        "nombre": "Bienal Internacional de Danza de Cali",
+        "fecha": "2025-11-05",
+        "hora": "5:00 p.m.",
+        "lugar": "Varios escenarios de Cali",
+        "descripcion": "Encuentro escénico con participación nacional e internacional de danza contemporánea.",
+        "ingreso": "Costo",
+        "url": "https://occidente.co/cali/eventos-en-cali-2025-agenda-turistica/"
+      },
+      {
+        "nombre": "Feria Internacional del Libro de Cali",
+        "fecha": "2025-11-10",
+        "hora": "10:00 a.m.",
+        "lugar": "Centro de Eventos Valle del Pacífico",
+        "descripcion": "Muestra editorial con autores nacionales e internacionales, talleres y presentaciones.",
+        "ingreso": "Gratis",
+        "url": "https://occidente.co/cali/eventos-en-cali-2025-agenda-turistica/"
+      },
+      {
+        "nombre": "Festival de Cine de Cali",
+        "fecha": "2025-11-20",
+        "hora": "4:00 p.m.",
+        "lugar": "Cinemateca La Tertulia",
+        "descripcion": "Muestra de cine independiente y documental latinoamericano.",
+        "ingreso": "Costo",
+        "url": "https://www.cali.gov.co/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Cali",
+    "categoria": "Conciertos",
+    "eventos": [
+      {
+        "nombre": "Residente - Las Letras Ya No Importan Tour",
+        "fecha": "2025-11-24",
+        "hora": "8:00 p.m.",
+        "lugar": "Arena Cañaveralejo",
+        "descripcion": "El ex Calle 13 presenta su tour mundial en Cali con su característico rap consciente.",
+        "ingreso": "Costo",
+        "url": "https://conciertosencali.com/"
+      },
+      {
+        "nombre": "Shakira - Las Mujeres Ya No Lloran Tour",
+        "fecha": "2025-11-01",
+        "hora": "8:00 p.m.",
+        "lugar": "Vive Claro Distrito Cultural",
+        "descripcion": "La artista colombiana presenta su gira mundial en su país natal.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "Alejandro Fernández en Cali",
+        "fecha": "2025-11-23",
+        "hora": "8:00 p.m.",
+        "lugar": "Arena Cañaveralejo",
+        "descripcion": "El Potrillo presenta su tour México Lindo y Querido en la Sucursal del Cielo.",
+        "ingreso": "Costo",
+        "url": "https://canaltrece.com.co/noticias/conciertos-en-colombia-2025/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bogotá",
+    "categoria": "Deportes",
+    "eventos": [
+      {
+        "nombre": "Media Maratón de Bogotá",
+        "fecha": "2025-11-16",
+        "hora": "7:00 a.m.",
+        "lugar": "Parque Simón Bolívar",
+        "descripcion": "Carrera de 21K con participación masiva de corredores nacionales e internacionales.",
+        "ingreso": "Costo",
+        "url": "https://www.mediamaratonbogota.com/"
+      },
+      {
+        "nombre": "Clásico Deportivo Universitario",
+        "fecha": "2025-11-22",
+        "hora": "2:00 p.m.",
+        "lugar": "Estadio El Campín",
+        "descripcion": "Encuentro deportivo entre las principales universidades de Bogotá.",
+        "ingreso": "Gratis",
+        "url": "https://visitbogota.co/"
+      },
+      {
+        "nombre": "Torneo de Tenis Copa Colsanitas",
+        "fecha": "2025-11-09",
+        "hora": "10:00 a.m.",
+        "lugar": "Club El Rancho",
+        "descripcion": "Torneo de tenis profesional femenino WTA 125.",
+        "ingreso": "Costo",
+        "url": "https://www.copacolsanitas.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bogotá",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Festival de Jazz al Parque",
+        "fecha": "2025-11-14",
+        "hora": "3:00 p.m.",
+        "lugar": "Parque Simón Bolívar",
+        "descripcion": "Festival gratuito de jazz con artistas nacionales e internacionales.",
+        "ingreso": "Gratis",
+        "url": "https://www.idartes.gov.co/"
+      },
+      {
+        "nombre": "Ópera al Parque",
+        "fecha": "2025-11-07",
+        "hora": "5:00 p.m.",
+        "lugar": "Parque Metropolitano Simón Bolívar",
+        "descripcion": "Festival gratuito de ópera al aire libre con las mejores voces del país.",
+        "ingreso": "Gratis",
+        "url": "https://www.idartes.gov.co/"
+      },
+      {
+        "nombre": "Margarita Siempre Viva - Bogotá",
+        "fecha": "2025-11-06",
+        "hora": "8:00 p.m.",
+        "lugar": "Bonfire",
+        "descripcion": "Concierto íntimo de Margarita como parte de El Principio Tour.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "MOLCHAT DOMA en Bogotá",
+        "fecha": "2025-11-07",
+        "hora": "8:00 p.m.",
+        "lugar": "Centro de Eventos Royal Center",
+        "descripcion": "La banda bielorrusa de post-punk presenta su tour en Colombia.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "Yuri Buenaventura",
+        "fecha": "2025-11-08",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Colsubsidio",
+        "descripcion": "El cantante colombo-francés presenta su álbum Ámame y sus éxitos de siempre.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "Carminho - Festival de Fado 2025",
+        "fecha": "2025-11-08",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Mayor Julio Mario Santo Domingo",
+        "descripcion": "La cantante portuguesa de fado presenta su arte en Bogotá.",
+        "ingreso": "Costo",
+        "url": "https://www.teatromayor.org/"
+      },
+      {
+        "nombre": "Damiano David - Funny Little Fears Tour",
+        "fecha": "2025-11-13",
+        "hora": "8:00 p.m.",
+        "lugar": "Centro de Eventos Royal Center",
+        "descripcion": "El vocalista de Måneskin presenta su gira como solista.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "BLESSD - Trinidad Bendita",
+        "fecha": "2025-11-22",
+        "hora": "8:00 p.m.",
+        "lugar": "Vive Claro Distrito Cultural",
+        "descripcion": "El artista paisa presenta su tour Siempre Blessd en la capital.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "Kei Linch en concierto",
+        "fecha": "2025-11-23",
+        "hora": "8:00 p.m.",
+        "lugar": "Bonfire",
+        "descripcion": "Concierto de la artista colombiana Kei Linch.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "DUA LIPA - Radical Optimism Tour",
+        "fecha": "2025-11-28",
+        "hora": "8:00 p.m.",
+        "lugar": "Estadio Nemesio Camacho El Campín",
+        "descripcion": "La estrella pop británica presenta su gira mundial en Bogotá.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "Dennis Cruz - Save The Date Bogotá",
+        "fecha": "2025-11-28",
+        "hora": "10:00 p.m.",
+        "lugar": "Chamorro City Hall",
+        "descripcion": "DJ internacional de música electrónica con Miguelle & Tons.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bogotá",
+    "categoria": "Teatro",
+    "eventos": [
+      {
+        "nombre": "Festival Danza en la Ciudad",
+        "fecha": "2025-11-01",
+        "hora": "6:00 p.m.",
+        "lugar": "Varios teatros de Bogotá",
+        "descripcion": "Festival gratuito de danza contemporánea que se extiende del 1 al 9 de noviembre.",
+        "ingreso": "Gratis",
+        "url": "https://www.idartes.gov.co/"
+      },
+      {
+        "nombre": "Circonexión - Circo Contemporáneo",
+        "fecha": "2025-11-08",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Bernardo Romero Lozano",
+        "descripcion": "Espectáculo innovador que combina circo, magia y música con narrativa contemporánea.",
+        "ingreso": "Costo",
+        "url": "https://bogota.gov.co/"
+      },
+      {
+        "nombre": "Hablando Huevadas",
+        "fecha": "2025-11-15",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Astor Plaza",
+        "descripcion": "El exitoso show de comedia peruano con Ricardo Mendoza y Jorge Luna.",
+        "ingreso": "Costo",
+        "url": "https://teatros.checkout.tuboleta.com/"
+      },
+      {
+        "nombre": "Vulnerable - Teatro Inmersivo",
+        "fecha": "2025-11-22",
+        "hora": "7:00 p.m.",
+        "lugar": "Teatro Taller de Colombia",
+        "descripcion": "Obra inmersiva que aborda la ansiedad y la salud mental con tecnología y arte.",
+        "ingreso": "Costo",
+        "url": "https://bogota.gov.co/"
+      },
+      {
+        "nombre": "Antecitos del Memento Mori",
+        "fecha": "2025-11-29",
+        "hora": "6:30 p.m.",
+        "lugar": "Ditirambo Palermo",
+        "descripcion": "Teatro inmersivo con más de 15 micro monólogos en una casa cultural.",
+        "ingreso": "Costo",
+        "url": "https://bogota.gov.co/"
+      }
+    ]
+  }
+]
+[
+  {
+    "ciudad": "Medellín",
+    "categoria": "Deportes",
+    "eventos": [
+      {
+        "nombre": "ASICS Golden Run Medellín 2025",
+        "fecha": "2025-11-02",
+        "hora": "6:30 a.m.",
+        "lugar": "Universidad EAFIT, Medellín",
+        "descripcion": "Carrera de 21K y 10K organizada por ASICS Colombia, con salida en la Universidad EAFIT y llegada en el Parque Comercial El Tesoro.",
+        "ingreso": "Costo",
+        "url": "https://asicsgoldenrun.co/"
+      },
+      {
+        "nombre": "6H RUN Medellín 2025",
+        "fecha": "2025-11-08",
+        "hora": "6:00 p.m.",
+        "lugar": "Estadio de Atletismo Alfonso Galvis Duque",
+        "descripcion": "Carrera nocturna de 6 horas en el Estadio de Atletismo Alfonso Galvis Duque, organizada por MCM Operador de Eventos.",
+        "ingreso": "Costo",
+        "url": "https://www.visitmedellin.co/event/6h-run-medellin-2025-carrera-nocturna-en-el-estadio-alfonso-galvis/"
+      },
+      {
+        "nombre": "Fútbol Sin Fronteras",
+        "fecha": "2025-11-01",
+        "hora": "10:00 a.m.",
+        "lugar": "Complejo Deportivo Coldeportes",
+        "descripcion": "Evento de visoría de talento futbolístico con equipos nacionales e internacionales.",
+        "ingreso": "Gratis",
+        "url": "https://www.canasportsgroup.com/en/futbol/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Medellín",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Ritvales 2025",
+        "fecha": "2025-11-01",
+        "hora": "2:00 p.m.",
+        "lugar": "Parque Norte",
+        "descripcion": "Festival de música electrónica al aire libre con DJs nacionales e internacionales.",
+        "ingreso": "Costo",
+        "url": "https://ticketlive.com.co/co/festivales/ritvales-2025-1-y-2-noviembre-2025-medellin/"
+      },
+      {
+        "nombre": "J Balvin en concierto",
+        "fecha": "2025-11-29",
+        "hora": "8:00 p.m.",
+        "lugar": "Estadio Atanasio Girardot",
+        "descripcion": "Concierto del artista colombiano J Balvin en su ciudad natal.",
+        "ingreso": "Costo",
+        "url": "https://ticketlive.com.co/co/conciertos/j-balvin-en-medellin-30-noviembre-2024/"
+      },
+      {
+        "nombre": "La Cantina Más Grande de Colombia 2025",
+        "fecha": "2025-11-15",
+        "hora": "9:00 p.m.",
+        "lugar": "Parque Norte",
+        "descripcion": "Concierto de música popular con artistas invitados.",
+        "ingreso": "Costo",
+        "url": "https://larcmedios.net/2024/12/04/la-cantina-mas-grande-de-colombia-2025-una-gira-que-promete-ser-inolvidable/"
+      },
+      {
+        "nombre": "Margarita Siempre Viva - Medellín",
+        "fecha": "2025-11-21",
+        "hora": "8:00 p.m.",
+        "lugar": "La Pascasia",
+        "descripcion": "Concierto de Margarita como parte de El Principio Tour 2025.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "Julieta Venegas en Medellín",
+        "fecha": "2025-11-29",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Metropolitano",
+        "descripcion": "La cantautora mexicana Julieta Venegas presenta su gira de 2025 en Medellín.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      },
+      {
+        "nombre": "Dennis Cruz - Medellín",
+        "fecha": "2025-11-30",
+        "hora": "10:00 p.m.",
+        "lugar": "Parque Norte",
+        "descripcion": "DJ internacional Dennis Cruz en Botaniq con Miguelle & Tons.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Medellín",
+    "categoria": "Teatro",
+    "eventos": [
+      {
+        "nombre": "La Casa de Bernarda Alba",
+        "fecha": "2025-11-10",
+        "hora": "7:30 p.m.",
+        "lugar": "Teatro Metropolitano",
+        "descripcion": "Obra clásica de Federico García Lorca dirigida por el Teatro Popular de Medellín.",
+        "ingreso": "Costo",
+        "url": "https://www.teatro.com.co/"
+      },
+      {
+        "nombre": "La Travesía de Astromelia",
+        "fecha": "2025-11-12",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Pablo Tobón Uribe",
+        "descripcion": "Obra de teatro que combina elementos de la tragicomedia con una estética oceánica.",
+        "ingreso": "Costo",
+        "url": "https://teatropablotobon.com/"
+      },
+      {
+        "nombre": "El Principito",
+        "fecha": "2025-11-20",
+        "hora": "6:00 p.m.",
+        "lugar": "Teatro Metropolitano",
+        "descripcion": "Adaptación teatral del clásico de Antoine de Saint-Exupéry.",
+        "ingreso": "Costo",
+        "url": "https://www.teatro.com.co/"
+      },
+      {
+        "nombre": "La Granja de Zenón",
+        "fecha": "2025-11-03",
+        "hora": "5:00 p.m.",
+        "lugar": "Teatro Mayor Medellín",
+        "descripcion": "Espectáculo musical infantil La Búsqueda del Tesoro con los personajes favoritos de los niños.",
+        "ingreso": "Costo",
+        "url": "https://latiquetera.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Medellín",
+    "categoria": "Culturales",
+    "eventos": [
+      {
+        "nombre": "Feria de las Flores",
+        "fecha": "2025-11-05",
+        "hora": "10:00 a.m.",
+        "lugar": "Parque Norte",
+        "descripcion": "Exposición cultural con muestras de flora, música y gastronomía típica.",
+        "ingreso": "Gratis",
+        "url": "https://www.festivaldelasflores.com/"
+      },
+      {
+        "nombre": "Festival Internacional de Cine de Medellín",
+        "fecha": "2025-11-06",
+        "hora": "4:00 p.m.",
+        "lugar": "Teatro Universidad de Medellín",
+        "descripcion": "Muestra de cine independiente con películas de diversos países.",
+        "ingreso": "Costo",
+        "url": "https://www.ficmedellin.com/"
+      },
+      {
+        "nombre": "Festival de Jazz de Medellín",
+        "fecha": "2025-11-07",
+        "hora": "5:00 p.m.",
+        "lugar": "Teatro Metropolitano",
+        "descripcion": "Conciertos de jazz con artistas nacionales e internacionales.",
+        "ingreso": "Costo",
+        "url": "https://www.festivaldejazzmedellin.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Medellín",
+    "categoria": "Conciertos",
+    "eventos": [
+      {
+        "nombre": "Caro Jaramillo en concierto",
+        "fecha": "2025-11-01",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Pablo Tobón Uribe",
+        "descripcion": "Concierto de la cantante colombiana Caro Jaramillo.",
+        "ingreso": "Costo",
+        "url": "https://teatropablotobon.com/evento/caro-jaramillo-en-concierto/"
+      },
+      {
+        "nombre": "La Cantina Más Grande de Colombia 2025",
+        "fecha": "2025-11-15",
+        "hora": "9:00 p.m.",
+        "lugar": "Parque Norte",
+        "descripcion": "Concierto de música popular con artistas invitados.",
+        "ingreso": "Costo",
+        "url": "https://larcmedios.net/2024/12/04/la-cantina-mas-grande-de-colombia-2025-una-gira-que-promete-ser-inolvidable/"
+      },
+      {
+        "nombre": "Festival Internacional de Salsa de Medellín",
+        "fecha": "2025-11-22",
+        "hora": "7:00 p.m.",
+        "lugar": "Teatro Metropolitano",
+        "descripcion": "Conciertos de salsa con agrupaciones nacionales e internacionales.",
+        "ingreso": "Costo",
+        "url": "https://www.festivalsalsamedellin.com/"
+      },
+      {
+        "nombre": "BLESSD - Trinidad Bendita",
+        "fecha": "2025-11-22",
+        "hora": "8:00 p.m.",
+        "lugar": "Vive Claro Distrito Cultural",
+        "descripcion": "Concierto del artista paisa BLESSD con su tour Siempre Blessd.",
+        "ingreso": "Costo",
+        "url": "https://www.ticketmaster.co/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Deportes",
+    "eventos": [
+      {
+        "nombre": "Maratón Internacional de Bucaramanga",
+        "fecha": "2025-11-09",
+        "hora": "7:00 a.m.",
+        "lugar": "Parque García Rovira",
+        "descripcion": "Carrera de 42K, 21K y 10K con participación internacional.",
+        "ingreso": "Costo",
+        "url": "https://www.maratonbucaramanga.com/"
+      },
+      {
+        "nombre": "Copa Ciudad Bonita de Fútbol",
+        "fecha": "2025-11-15",
+        "hora": "9:00 a.m.",
+        "lugar": "Estadio Alfonso López",
+        "descripcion": "Torneo de fútbol con equipos locales y nacionales.",
+        "ingreso": "Gratis",
+        "url": "https://www.copaciudadbonita.com/"
+      },
+      {
+        "nombre": "Festival de Ciclismo Urbano",
+        "fecha": "2025-11-22",
+        "hora": "10:00 a.m.",
+        "lugar": "Parque de los Niños",
+        "descripcion": "Competencia de ciclismo urbano con categorías para todas las edades.",
+        "ingreso": "Gratis",
+        "url": "https://www.festivalciclismobucaramanga.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Música",
+    "eventos": [
+      {
+        "nombre": "Luifer Cuello en Bucaramanga",
+        "fecha": "2025-11-20",
+        "hora": "8:00 p.m.",
+        "lugar": "Santander Theatre",
+        "descripcion": "Concierto de salsa y tropical con Luifer Cuello en el Santander Theatre.",
+        "ingreso": "Costo",
+        "url": "https://www.shazam.com/es-mx/events/bucaramanga-santander-colombia"
+      },
+      {
+        "nombre": "El Baile del Año 2025",
+        "fecha": "2025-11-22",
+        "hora": "9:00 p.m.",
+        "lugar": "Centro de Convenciones Neomundo",
+        "descripcion": "Gran evento de música tropical y popular con varios artistas invitados.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "Festival de Música Andina Colombiana",
+        "fecha": "2025-11-14",
+        "hora": "6:00 p.m.",
+        "lugar": "Teatro Santander",
+        "descripcion": "Festival dedicado a la música tradicional andina con artistas de la región.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "Alejandro Fernández en Bucaramanga",
+        "fecha": "2025-11-30",
+        "hora": "8:00 p.m.",
+        "lugar": "Plaza de Toros",
+        "descripcion": "El Potrillo trae su gira México Lindo y Querido a Bucaramanga.",
+        "ingreso": "Costo",
+        "url": "https://canaltrece.com.co/noticias/conciertos-en-colombia-2025/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Teatro",
+    "eventos": [
+      {
+        "nombre": "Romeo y Julieta",
+        "fecha": "2025-11-08",
+        "hora": "7:00 p.m.",
+        "lugar": "Teatro Santander",
+        "descripcion": "Adaptación moderna de la obra clásica de William Shakespeare.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "El Misántropo",
+        "fecha": "2025-11-16",
+        "hora": "8:00 p.m.",
+        "lugar": "Teatro Cultural Peralta",
+        "descripcion": "Comedia de Molière adaptada al contexto colombiano contemporáneo.",
+        "ingreso": "Costo",
+        "url": "https://www.tuboleta.com/"
+      },
+      {
+        "nombre": "Jhovanoty - Puro Show",
+        "fecha": "2025-11-25",
+        "hora": "7:30 p.m.",
+        "lugar": "Centro de Eventos CENFER",
+        "descripcion": "Espectáculo de humor con Jhovanoty y sus personajes más queridos.",
+        "ingreso": "Costo",
+        "url": "https://latiquetera.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Culturales",
+    "eventos": [
+      {
+        "nombre": "Feria Artesanal de Bucaramanga",
+        "fecha": "2025-11-12",
+        "hora": "10:00 a.m.",
+        "lugar": "Parque del Agua",
+        "descripcion": "Exposición de artesanías locales y regionales con música folclórica en vivo.",
+        "ingreso": "Gratis",
+        "url": "https://www.turismobucaramanga.com/"
+      },
+      {
+        "nombre": "Festival Gastronómico de Santander",
+        "fecha": "2025-11-18",
+        "hora": "11:00 a.m.",
+        "lugar": "Centro Comercial Cacique",
+        "descripcion": "Muestra gastronómica con platos típicos de la región santandereana.",
+        "ingreso": "Gratis",
+        "url": "https://www.turismobucaramanga.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Bucaramanga",
+    "categoria": "Conciertos",
+    "eventos": [
+      {
+        "nombre": "Festival de Rock Bumangués",
+        "fecha": "2025-11-28",
+        "hora": "6:00 p.m.",
+        "lugar": "Parque San Pío",
+        "descripcion": "Festival de rock con bandas locales y nacionales.",
+        "ingreso": "Gratis",
+        "url": "https://www.turismobucaramanga.com/"
+      },
+      {
+        "nombre": "Marcos Witt - Tour Legado",
+        "fecha": "2025-11-10",
+        "hora": "7:00 p.m.",
+        "lugar": "CENFER",
+        "descripcion": "Concierto del reconocido cantante de música cristiana con 39 años de trayectoria.",
+        "ingreso": "Costo",
+        "url": "https://special.checkout.tuboleta.com/"
+      }
+    ]
+  },
+  {
+    "ciudad": "Cali",
+    "categoria": "Deportes",
+    "eventos": [
+      {
+        "nombre": "Carrera Río Cali 2025",
+        "fecha": "2025-11-30",
+        "hora": "7:00 a.m.",
+        "lugar": "Río Cali",
+        "descripcion": "Competencia atlética tradicional de Cali con varias categorías de distancia.",
+        "ingreso": "Costo",
+        "url": "https://occidente.co/cali/eventos-en-cali-2025-agenda-turistica/"
+      },
+(Truncated for brevity in create_file content)
